@@ -1,0 +1,184 @@
+.banner {
+  // .banner__inner
+  &__inner {
+    position: relative;
+    padding: 190px 0 40px;
+    background-image: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+    background-color: #0b4bec;
+
+    @media (max-width: $mbp4 + px) {
+      padding: 100px 0 40px;
+    }
+  }
+
+  // .banner__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  // .banner__title
+  &__title {
+    margin-bottom: 20px;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+  }
+
+  // .banner__title-description
+  &__title-description {
+    margin: 0 auto 45px;
+    max-width: 950px;
+    font-family: "Nunito";
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+  }
+
+  // .banner__apply-button
+  &__apply-button {
+    margin-bottom: 90px;
+    text-align: center;
+
+    @media (max-width: $mbp6 + px) {
+      margin-bottom: 60px;
+    }
+  }
+
+  // .banner__apply-link
+  &__apply-link {
+    display: inline-block;
+    border-radius: 22px;
+    padding: 8px 50px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  // .banner__credit-cards
+  &__credit-cards {
+    position: relative;
+    text-align: center;
+  }
+
+  // .banner__credit-card-img
+  &__credit-card-img {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    object-fit: cover;
+
+    // .banner__credit-card-img_side
+    &_side {
+      position: absolute;
+      z-index: 1;
+      margin-top: 63px;
+      opacity: 0.4;
+
+      @media (max-width: $mbp6 + px) {
+        margin-top: 43px;
+      }
+    }
+
+    // .banner__credit-card-img_left
+    &_left {
+      left: 0;
+    }
+
+    // .banner__credit-card-img_right
+    &_right {
+      right: 0;
+    }
+  }
+}
+
+.decoration-figure {
+  position: absolute;
+  right: calc(0vw - (0 - -185) * ((595px - 22vw) / (0 - -185)));
+  top: 30%;
+
+  // .decoration-figure__element
+  &__element {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 80px;
+    width: 345px;
+    height: 500px;
+    transform: rotate(-58deg);
+
+    // .decoration-figure__element_bottom-layer
+    &_bottom-layer {
+      position: relative;
+      right: 50px;
+      top: -130px;
+      background-image: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+      opacity: 0.25;
+    }
+
+    // .decoration-figure__element_top-layer
+    &_top-layer {
+      background-image: linear-gradient(-18deg, rgba(7, 29, 104, 0.2) 0%, rgba(11, 75, 236, 0.2) 100%);
+    }
+
+    @media (max-width: $mbp4 + px) {
+      border-radius: 60px;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: $mbp4 + px) {
+    right: calc(0vw - (0 - -185) * ((595px - 22vw) / (0 - -285)));
+    top: 20%;
+  }
+}
+
+.decoration-icon {
+  position: absolute;
+  left: calc(15px + (240 - 0) * ((100vw - 320px) / (1920 - 320)));
+  top: calc(20px + (220 - 0) * ((100vw - 320px) / (1920 - 320)));
+
+  // .decoration-icon__percent
+  &__percent {
+    position: relative;
+    left: 55px;
+    width: 53px;
+    height: 51px;
+    background: url("../img/icons/percent.svg") no-repeat;
+    opacity: 0.6;
+  }
+
+  // .decoration-icon__shopping
+  &__shopping {
+    position: relative;
+    left: 130px;
+    top: 60px;
+    width: 64px;
+    height: 45px;
+    background: url("../img/icons/shopping.svg") no-repeat;
+    opacity: 0.4;
+  }
+
+  // .decoration-icon__shopping-list
+  &__shopping-list {
+    position: relative;
+    top: 40px;
+    width: 83px;
+    height: 91px;
+    background: url("../img/icons/shopping-list.svg") no-repeat;
+    opacity: 0.4;
+  }
+
+  // .decoration-icon__dollar
+  &__dollar {
+    position: relative;
+    left: 135px;
+    top: 40px;
+    width: 47px;
+    height: 68px;
+    background: url("../img/icons/dollar.svg") no-repeat;
+    opacity: 0.5;
+  }
+}

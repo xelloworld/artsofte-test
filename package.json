@@ -1,0 +1,39 @@
+{
+  "name": "start-frontend-project_gulp",
+  "version": "1.0.0",
+  "description": "Start frontend project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "js",
+    "sass"
+  ],
+  "author": "Sergey Savchenko",
+  "license": "WTFPL",
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "imagemin-webp": "^6.0.0",
+    "sass": "^1.35.1",
+    "stylelint": "^13.13.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0"
+  },
+  "dependencies": {
+    "swiper": "^6.7.5"
+  }
+}

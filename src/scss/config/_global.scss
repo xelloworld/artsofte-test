@@ -1,0 +1,69 @@
+body {
+  min-width: $minWidth;
+  font-family: $fontFamily;
+
+  &.body-scroll-lock-js {
+    overflow: hidden;
+  }
+}
+
+input,
+button,
+textarea {
+  font-family: $fontFamily;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $paddingContainer;
+  max-width: $maxWidthContainer;
+}
+
+.link-button {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 14px;
+  color: #0b4bec;
+  background-color: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 1px #fff inset;
+    color: #fff;
+    background-image: linear-gradient(to top, rgba(#071d68, 0.1) 0%, rgba(#0b4bec, 0.1) 100%);
+    background-color: #0b4bec;
+  }
+}
+
+.title {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #808080;
+}
+
+.main-title {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.word-nowrap {
+  white-space: nowrap;
+}

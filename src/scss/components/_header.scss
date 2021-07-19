@@ -1,0 +1,223 @@
+.header {
+  background-image: linear-gradient(to top, rgba(#071d68, 0.3) 0%, rgba(#0b4bec, 0.1) 100%);
+  background-color: #0b4bec;
+
+  // .header__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 0;
+
+    @media (max-width: $mbp4 + px) {
+      padding: 26px 0;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 55px;
+  height: 43px;
+  min-width: 220px;
+  max-width: 220px;
+  font-family: "Poppins";
+  color: #fff;
+  background: url("../img/icons/logo.svg") no-repeat;
+
+  // .logo__name
+  &__name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 3px 3px rgba(30, 28, 28, 0.75);
+    text-transform: uppercase;
+  }
+
+  // .logo__tagline
+  &__tagline {
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  @media (max-width: $mbp4 + px) {
+    z-index: 11;
+  }
+}
+
+.menu {
+  display: flex;
+  flex: 1 1 auto;
+  align-self: center;
+  justify-content: flex-end;
+
+  // .menu__list
+  &__list {
+    display: flex;
+    flex: 0 1 450px;
+    justify-content: space-between;
+    margin: 0 32px;
+
+    @media (max-width: $mbp4 + px) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: block;
+      overflow: auto;
+      margin: 0;
+      padding: 115px 0 20px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-image: linear-gradient(-18deg, rgba(#071d68, 0.7) 0%, rgba(#0b4bec, 0.1) 100%);
+      background-color: #0b4bec;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+
+      &::after {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 95px;
+        background-image: linear-gradient(to top, rgba(#071d68, 0.3) 0%, rgba(#0b4bec, 0.1) 100%);
+        background-color: #0b4bec;
+      }
+
+      // .menu__list .menu__list_open-js
+      &.menu__list_open-js {
+        z-index: 10;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  // .menu__link
+  &__link {
+    position: relative;
+    display: block;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.14px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #fff;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: transparent;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      &::after {
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+      }
+    }
+
+    @media (max-width: $mbp4 + px) {
+      display: inline;
+      font-size: 26px;
+      line-height: 50px;
+    }
+  }
+}
+
+.create-account {
+  flex: 0 0 128px;
+  align-self: center;
+  margin-left: auto;
+
+  // .create-account_link
+  &_link {
+    display: inline-block;
+    border-radius: 12px;
+    padding: 8px 11px;
+  }
+
+  @media (max-width: $mbp4 + px) {
+    z-index: 11;
+  }
+
+  @media (max-width: $mbp6 + px) {
+    z-index: 0;
+    margin: 10px 0 20px;
+  }
+}
+
+.burger-icon {
+  position: relative;
+  z-index: 11;
+  display: none;
+  flex: 0 0 auto;
+  align-self: center;
+  margin-left: 32px;
+  width: 40px;
+  height: 40px;
+
+  // .burger-icon__button
+  &__button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    // .burger-icon__button .burger-icon__button_active-js
+    &.burger-icon__button_active-js {
+      .burger-icon__button-line {
+        transform: scale(0);
+
+        &:first-child {
+          top: 33%;
+          transform: rotate(-45deg);
+        }
+
+        &:last-child {
+          bottom: 33%;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  // .burger-icon__button-line
+  &__button-line {
+    position: relative;
+    border-radius: 2px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:last-child {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  @media (max-width: $mbp4 + px) {
+    display: block;
+  }
+}

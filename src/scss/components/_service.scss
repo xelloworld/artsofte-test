@@ -1,0 +1,117 @@
+.service {
+  // .service__inner
+  &__inner {
+    padding: 150px 0;
+
+    @media (max-width: $mbp3 + px) {
+      padding-bottom: 130px;
+    }
+
+    @media (max-width: $mbp4 + px) {
+      padding: 75px 0;
+    }
+  }
+
+  // .service__main-title
+  &__main-title {
+    margin-bottom: 50px;
+  }
+}
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1365px;
+
+  // .slider__slide
+  &__slide {
+    max-height: 350px;
+
+    &:hover {
+      .slider__slide-title {
+        border: 1px solid #0b4bec;
+        border-top: none;
+        color: #fff;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  // .slider__slide-img
+  &__slide-img {
+    width: 100%;
+    max-height: 269px;
+    object-fit: cover;
+  }
+
+  // .slider__slide-title
+  &__slide-title {
+    border: 1px solid rgba(4, 4, 4, 0.2);
+    border-top: none;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 78px;
+    text-align: center;
+    color: #333;
+    background: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+    background-position: 50% 50%;
+    background-size: 100% 0%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+  }
+
+  // .slider__button
+  &__button {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background: transparent;
+    transform: translateY(-50%);
+
+    // .slider__button_prev
+    &_prev {
+      left: 15px;
+    }
+
+    // .slider__button_next
+    &_next {
+      right: 15px;
+    }
+
+    path {
+      fill: #333;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      path {
+        fill: #0b4bec;
+      }
+    }
+
+    // .slider__button .swiper-button-disabled
+    &.swiper-button-disabled {
+      path {
+        fill: #808080;
+      }
+
+      &:hover {
+        path {
+          fill: #808080;
+        }
+      }
+    }
+
+    @media (max-width: $mbp1 + px) {
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      background-color: #f3f2f2;
+
+      svg {
+        padding-top: 3px;
+      }
+    }
+  }
+}

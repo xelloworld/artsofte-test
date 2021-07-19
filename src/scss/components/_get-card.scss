@@ -1,0 +1,119 @@
+.get-card {
+  background-color: #f3f2f2;
+
+  // .get-card__inner
+  &__inner {
+    padding: 150px 0;
+    text-align: center;
+
+    @media (max-width: $mbp3 + px) {
+      padding-bottom: 130px;
+    }
+
+    @media (max-width: $mbp4 + px) {
+      padding: 75px 0;
+    }
+  }
+
+  // .get-card__main-title
+  &__main-title {
+    margin-bottom: 84px;
+
+    @media (max-width: $mbp4 + px) {
+      margin-bottom: 64px;
+    }
+  }
+
+  // .get-card__wrapper
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mbp4 + px) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  // .get-card__body
+  &__body {
+    display: flex;
+    flex: 0 1 370px;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: $mbp4 + px) {
+      margin-right: 0;
+    }
+  }
+
+  // .get-card__link
+  &__link {
+    margin: 42px 0;
+    border: 1px solid rgba(4, 4, 4, 0.1);
+    padding: 46px 35px;
+    background: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+    background-position: 50% 50%;
+    background-size: 100% 0%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      margin: 0;
+      padding-top: 88px;
+      padding-bottom: 88px;
+      background-size: 100% 100%;
+
+      .get-card__block-title {
+        color: #fff;
+      }
+
+      .get-card__block-article {
+        color: #eeecec;
+      }
+    }
+
+    @media (max-width: $mbp3 + px) {
+      padding: 46px 20px;
+    }
+
+    @media (max-width: $mbp4 + px) {
+      margin: 21px 0;
+      padding: 23px 15px;
+
+      &:hover {
+        padding-top: 44px;
+        padding-bottom: 44px;
+      }
+    }
+  }
+
+  // .get-card__block-img
+  &__block-img {
+    margin-bottom: 15px;
+  }
+
+  // .get-card__block-title
+  &__block-title {
+    margin-bottom: 13px;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #000;
+    transition: all 0.3s ease;
+  }
+
+  // .get-card__block-article
+  &__block-article {
+    font-size: 14px;
+    line-height: 28px;
+    color: #808080;
+    transition: all 0.3s ease;
+  }
+}

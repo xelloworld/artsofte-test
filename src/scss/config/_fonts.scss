@@ -1,0 +1,66 @@
+// === Подклчение Raleway ===
+@include font-lat("Raleway", "Raleway-Regular-latin", "400", "normal");
+@include font-lat-ext("Raleway", "Raleway-Regular-latin-ext", "400", "normal");
+
+// === Подключение Poppins ===
+
+// === Light ===
+@include font-lat("Poppins", "Poppins-Light-latin", "300", "normal");
+@include font-lat-ext("Poppins", "Poppins-Light-latin-ext", "300", "normal");
+
+// === Regular ===
+@include font-lat("Poppins", "Poppins-Regular-latin", "400", "normal");
+@include font-lat-ext("Poppins", "Poppins-Regular-latin-ext", "400", "normal");
+
+// === Semi-bold ===
+@include font-lat("Poppins", "Poppins-Semi-bold-latin", "600", "normal");
+@include font-lat-ext("Poppins", "Poppins-Semi-bold-latin-ext", "600", "normal");
+
+// === Bold ===
+@include font-lat("Poppins", "Poppins-Bold-latin", "700", "normal");
+@include font-lat-ext("Poppins", "Poppins-Bold-latin-ext", "700", "normal");
+
+// === Подклчение Nunito ===
+@include font-lat("Nunito", "Nunito-Regular-latin", "400", "normal");
+@include font-lat-ext("Nunito", "Nunito-Regular-latin-ext", "400", "normal");
+
+// === Подключение иконочного шрифта ===
+@font-face {
+  src:
+    url("../fonts/icons.woff2?jurniy") format("woff2"),
+    url("../fonts/icons.woff?jurniy") format("woff");
+  font-family: "icons";
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: never;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-users::before {
+  content: "\e900";
+}
+
+.icon-heart::before {
+  content: "\e901";
+}
+
+.icon-shopping-cart::before {
+  content: "\e902";
+}
+
+.icon-rocket::before {
+  content: "\e903";
+}
